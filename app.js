@@ -1,6 +1,7 @@
 
 const form = document.querySelector('.add-form');
 const list = document.querySelector('.todos');
+const searchInput = document.querySelector('.search input');
 
 function createTemplate(toDo) {
     let html = `
@@ -28,3 +29,14 @@ list.addEventListener('click', e => {
         e.target.parentElement.remove();
     }
 });
+
+searchInput.addEventListener('keyup', e => {
+    const value = searchInput.value.trim();
+    createValue(value);
+});
+
+const createValue = (value) => {
+    Array.from(list.children).filter((toDo) => {
+        return toDo.textContent.includes(value);
+    })
+};
