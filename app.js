@@ -31,12 +31,21 @@ list.addEventListener('click', e => {
 });
 
 searchInput.addEventListener('keyup', e => {
-    const value = searchInput.value.trim();
+    const value = searchInput.value.trim().toLowerCase();
     createValue(value);
 });
 
 const createValue = (value) => {
+
     Array.from(list.children).filter((toDo) => {
-        return toDo.textContent.includes(value);
+        return !toDo.textContent.toLowerCase().includes(value);
+    }).forEach(toDo => {
+        toDo.classList.add('filtered')
+    })
+
+    Array.from(list.children).filter((toDo) => {
+        return toDo.textContent.toLowerCase().includes(value);
+    }).forEach(toDo => {
+        toDo.classList.remove('filtered')
     })
 };
