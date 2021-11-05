@@ -7,7 +7,7 @@ function createTemplate(toDo) {
     let html = `
     <li class="list-group-item d-flex justify-content-between align-items-center">
         <span>${toDo}</span>
-        <i class="far fa-trash-alt delete"></i>
+        <span class="text-danger delete">Sil <i class="far fa-trash-alt deletee"></i></span>
     </li>`;
 
     list.innerHTML += html;
@@ -27,6 +27,9 @@ form.addEventListener('submit', e => {
 list.addEventListener('click', e => {
     if(e.target.classList.contains('delete')) {
         e.target.parentElement.remove();
+    };
+    if(e.target.classList.contains('deletee')) {
+        e.target.parentElement.parentElement.remove();
     }
 });
 

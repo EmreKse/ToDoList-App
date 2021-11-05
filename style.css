@@ -13,11 +13,15 @@ input[type=text], input[type=text]:focus {
 }
 
 .todos li {
-    background-color:mediumaquamarine ;
+    background-color:rgb(154, 241, 233) ;
 }
 
 .delete {
     cursor:pointer;
+}
+
+.delete:hover {
+    text-shadow: 1px 1px 1px #df4759;
 }
 
 .filtered {
