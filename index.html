@@ -26,7 +26,7 @@
             <header class="text-center text-primary my-4">
                 <h1 class="mb-4">Yapılacaklar Listesi</h1>
                 <form class="search">
-                    <input type="text" class="form-control m-auto" name="search" placeholder="Listede Ara" />
+                    <input type="text" class="form-control m-auto text-primary" name="search" placeholder="Listede Ara" />
                 </form>
             </header>
             <ul class="list-group mx-auto text-black-50 todos">
@@ -43,9 +43,9 @@
                     <span class="text-danger delete">Sil <i class="far fa-trash-alt deletee"></i></span>
                 </li>
             </ul>
-            <form class="add-form my-5">
-                <label class="text-dark mx-2">Ekle:</label>
-                <input type="text" class="form-control m-auto" name="add" placeholder="Yeni Yapılacak">
+            <form class="add-form my-5" style="display: flex; align-items: center;">
+                <label class="text-dark mx-1">Ekle: </label>
+                <input type="text" class="form-control m-auto text-primary" name="add" placeholder="Yeni Yapılacak">
             </form>
         </div>
         <script src="app.js"></script>
